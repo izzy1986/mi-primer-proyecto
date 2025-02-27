@@ -1,0 +1,17 @@
+Aplicaciones de consola en C++.
+
+Para que funcione el entorno con las librerias correctamente, suponiendo que el entorno
+se ha instalado en la carpeta c:/Dev-Cpp hay que seguir los siguientes pasos:
+
+1.- Crear un proyecto: Archivo-->Nuevo-->Basic-->Console Application
+2.- Mirar si en la carpeta C:/Dev-Cpp/lib/ contiene el fichero conio.o 
+      Si no lo contiene descargarlo de la página Web.
+3.- Una vez creado el proyecto. En el menu Proyecto->Opciones de Proyecto->Parámetros-->Linker
+    pulsar sobre el botón Añadir biblioteca u Objeto: 
+    En el cuadro de diálogo que se abre escribir: C:/Dev-Cpp/lib/conio.o (si dev-c++ esta en ese directorio)
+
+
+NOTA: Para guardar los ficheros de la Web, situar el raton sobre los enlaces y con el boton 
+     derecho seleccionar (save target as/guardar como)
+
+Esto permite utilizar todas las funciones de la librería CONIO.H como clrscr, kbhit, gotoxy, textcolor, etc.

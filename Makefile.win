@@ -1,0 +1,32 @@
+# Project: Arkanoid
+# Makefile created by Dev-C++ 4.9.9.1
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Arkanoid.o teleco.o $(RES)
+LINKOBJ  = Arkanoid.o teleco.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  conio.o  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/include/c++"  -I"C:/Dev-Cpp/include/c++/mingw32"  -I"C:/Dev-Cpp/include/c++/backward"  -I"C:/Dev-Cpp/include" 
+BIN  = Arkanoid.exe
+CXXFLAGS = $(CXXINCS)   -Wall
+CFLAGS = $(INCS)   -Wall
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Arkanoid.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Arkanoid.exe" $(LIBS)
+
+Arkanoid.o: Arkanoid.cpp
+	$(CPP) -c Arkanoid.cpp -o Arkanoid.o $(CXXFLAGS)
+
+teleco.o: teleco.cpp
+	$(CPP) -c teleco.cpp -o teleco.o $(CXXFLAGS)
